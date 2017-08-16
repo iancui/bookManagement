@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper SYSTEM "mybatis-3-mapper.dtd">
+<mapper namespace="com.iancui.dao.AppointmentDao">
+	<insert id="insertAppointment">
+		<!-- ignore 主键冲突，报错 -->
+		INSERT INTO APPOINTMENT (ID_BOOK, ID_STUDENT)
+		VALUES (#{idBook}, #{idStudent})
+	</insert>
+	
+	<select id="queryByKeyWithBook" resultType="Appointment">
+		<!-- 如何告诉MyBatis把结果映射到Appointment同时映射book属性 -->
+		<!-- 可以自由控制SQL -->
+		SELECT
+			APPOINTMENT.ID_BOOK,
+			APPOINTMENT.ID_STUDENT,
+			APPOINTMENT.TIME_APPOINT,
+			BOOK.ID_BOOK "BOOK.ID_BOOK",
+			BOOK.NAME_BOOK "BOOK.NAME_BOOK",
+			BOOK.NUMBER_BOOK "BOOK.NUMBER_BOOK"
+		FROM
+			APPOINTMENT INNER JOIN BOOK 
+			ON (
+			APPOINTMENT.ID_BOOK = BOOK.ID_BOOK
+			)
+		WHERE
+			APPOINTMENT.ID_BOOK = #{idBook}
+		AND APPOINTMENT.ID_STUDENT = #{idStudent}
+	</select>
+</mapper>

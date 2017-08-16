@@ -1,0 +1,14 @@
+eclipse.preferences.version=1
+encoding//src/main/java/com/iancui/dao/AppointmentDao.java=UTF-8
+encoding//src/main/java/com/iancui/dao/BookDao.java=UTF-8
+encoding//src/main/java/com/iancui/dto/AppointExecution.java=UTF-8
+encoding//src/main/java/com/iancui/dto/Result.java=UTF-8
+encoding//src/main/java/com/iancui/entity/Appointment.java=UTF-8
+encoding//src/main/java/com/iancui/entity/Book.java=UTF-8
+encoding//src/main/java/com/iancui/enums/AppointStateEnum.java=UTF-8
+encoding//src/main/java/com/iancui/exeception/AppointException.java=UTF-8
+encoding//src/main/java/com/iancui/exeception/RepeatAppointException.java=UTF-8
+encoding//src/main/java/com/iancui/service/BookService.java=UTF-8
+encoding//src/main/java/com/iancui/service/impl/BookServiceImpl.java=UTF-8
+encoding//src/main/java/com/iancui/web/BookController.java=UTF-8
+encoding//src/test/java/com/iancui/BaseTest.java=UTF-8
